@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0806" />
+  <meta name="description" content="Odessa Düğün Salonu & Restoran online menüsü" />
+  <title>Odessa | Online Menü</title>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('odessa-theme') === 'light' ? 'light' : 'dark';
+    } catch (error) {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Aydınlık moda geç">
+        <span class="theme-toggle-thumb" aria-hidden="true"></span>
+        <span class="theme-toggle-option theme-toggle-dark" aria-hidden="true"><b>☾</b>Karanlık</span>
+        <span class="theme-toggle-option theme-toggle-light" aria-hidden="true"><b>☀</b>Aydınlık</span>
+      </button>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <img class="brand-logo" src="odessa-logo.png" alt="Odessa Düğün Salonu & Restoran" />
+      <p class="eyebrow">DÜĞÜN SALONU &amp; RESTORAN</p>
+      <h1>MENÜ</h1>
+      <div class="ornament" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+    </header>
+
+    <nav class="tabs-wrap" aria-label="Menü kategorileri">
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-kahvalti" id="tab-kahvalti" data-category="kahvalti">
+          Serpme Kahvaltı
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-et" id="tab-et" data-category="et">
+          Et Grubu
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-mesrubat" id="tab-mesrubat" data-category="mesrubat">
+          Meşrubat
+        </button>
+      </div>
+    </nav>
+
+    <main class="menu-area">
+      <section class="menu-panel is-active" id="panel-kahvalti" role="tabpanel" aria-labelledby="tab-kahvalti" tabindex="0">
+        <div class="section-heading">
+          <p class="section-kicker">Güne Odessa’da başlayın</p>
+          <h2>Serpme Kahvaltı</h2>
+        </div>
+
+        <article class="featured-card">
+          <div class="featured-topline">
+            <span>Kişi Başı</span>
+            <strong>1.400 TL</strong>
+          </div>
+          <p>
+            Peynir ve zeytin çeşitleri, taze söğüşler, bal–tereyağı, reçel ve kahvaltılık soslar,
+            meyve tabağı, sahanda yumurta, sucuklu yumurta, menemen, sosis, mantarlı sıcak,
+            pankek, pişi, börek çeşitleri, patates kızartması ve sınırsız çay eşliğinde servis edilir.
+          </p>
+          <div class="service-time">
+            <span aria-hidden="true">◷</span>
+            Servis süresi yaklaşık 15 dakikadır.
+          </div>
+        </article>
+      </section>
+
+      <section class="menu-panel" id="panel-et" role="tabpanel" aria-labelledby="tab-et" tabindex="0" hidden>
+        <div class="section-heading">
+          <p class="section-kicker">Izgaradan sıcak servis</p>
+          <h2>Et Grubu</h2>
+        </div>
+
+        <article class="special-card">
+          <div>
+            <span class="badge">Odessa Özel</span>
+            <h3>Kuzu–Dana Özel</h3>
+            <p>Karışık ızgara tabağı; köfte, sucuk, kuzu şiş, tavuk kanat ve günün özel et çeşitleriyle servis edilir.</p>
+          </div>
+          <div class="special-price"><small>KG</small><strong>2.900 TL</strong></div>
+        </article>
+
+        <div class="price-table" aria-label="Et grubu fiyat listesi">
+          <div class="price-row price-head">
+            <span>Ürün</span><span>KG</span><span>Porsiyon</span>
+          </div>
+          <div class="price-row"><strong>Kuzu Pirzola</strong><span>2.900 TL</span><span>1.100 TL</span></div>
+          <div class="price-row"><strong>Kuzu Külbastı</strong><span>2.500 TL</span><span>1.000 TL</span></div>
+          <div class="price-row"><strong>Kuzu Lokum</strong><span>2.900 TL</span><span>1.200 TL</span></div>
+          <div class="price-row"><strong>Kuzu Kaburga</strong><span>1.600 TL</span><span>—</span></div>
+          <div class="price-row"><strong>Kuzu Şiş</strong><span>2.800 TL</span><span>1.100 TL</span></div>
+          <div class="price-row"><strong>Dana Bonfile</strong><span>2.900 TL</span><span>1.100 TL</span></div>
+          <div class="price-row"><strong>Dana Antrikot</strong><span>2.800 TL</span><span>1.100 TL</span></div>
+          <div class="price-row"><strong>Dana Sucuk</strong><span>1.700 TL</span><span>600 TL</span></div>
+          <div class="price-row"><strong>Kasap Köfte</strong><span>1.700 TL</span><span>600 TL</span></div>
+          <div class="price-row"><strong>Tavuk Kanat</strong><span>1.100 TL</span><span>500 TL</span></div>
+          <div class="price-row"><strong>Tavuk Sarma</strong><span>800 TL</span><span>—</span></div>
+        </div>
+      </section>
+
+      <section class="menu-panel" id="panel-mesrubat" role="tabpanel" aria-labelledby="tab-mesrubat" tabindex="0" hidden>
+        <div class="section-heading">
+          <p class="section-kicker">Soğuk &amp; sıcak içecekler</p>
+          <h2>Meşrubat</h2>
+        </div>
+
+        <div class="drink-grid">
+          <article class="drink-card"><h3>Kutu Cola</h3><span>Fiyat sorunuz</span></article>
+          <article class="drink-card"><h3>Cam Cola</h3><span>Fiyat sorunuz</span></article>
+          <article class="drink-card"><h3>Kutu Fanta</h3><span>Fiyat sorunuz</span></article>
+          <article class="drink-card"><h3>Cam Fanta</h3><span>Fiyat sorunuz</span></article>
+          <article class="drink-card"><h3>Ayran</h3><strong>60 TL</strong></article>
+          <article class="drink-card"><h3>Kahve</h3><strong>120 TL</strong></article>
+          <article class="drink-card"><h3>Su</h3><strong>45 TL</strong></article>
+          <article class="drink-card"><h3>Soda</h3><strong>60 TL</strong></article>
+          <article class="drink-card"><h3>Çerez</h3><strong>200 TL</strong></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="ornament" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+      <p>Afiyet olsun.</p>
+      <small>Fiyatlar TL cinsindendir.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
